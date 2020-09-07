@@ -30,7 +30,10 @@ $("#login-form").submit(function (e) {
 
 })
 	
-document.getElementById("team_size").value=""
+document.getElementById("team_member_name").value=""
+document.getElementById("team_member_email").value=""
+document.getElementById("team_member_number").value=""
+
 
 function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -42,11 +45,16 @@ function handle_team_change(){
 	console.log(document.getElementById("team"),"is the value of select input")
 	if(document.getElementById("team").value == "2"){
 		document.getElementById("extra_member").style.display="block"
+		document.getElementById("extra_member1").style.display="block"
+		document.getElementById("extra_member2").style.display="block"
 	}
 	else{
-		document.getElementById("team_size").value=""
+		document.getElementById("team_member_name").value=""
+		document.getElementById("team_member_email").value=""
+		document.getElementById("team_member_number").value=""
 		document.getElementById("extra_member").style.display="none"
-
+		document.getElementById("extra_member1").style.display="none"
+		document.getElementById("extra_member2").style.display="none"
 	}
 }
 
