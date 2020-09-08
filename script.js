@@ -18,7 +18,7 @@ $("#login-form").submit(function (e) {
 		return response.json()
 	}).then(json_response=>{
 		if(json_response.result == "success"){
-			swal("Good Job !","Check your Email & join Whatsapp Group.","success").then(val=>{
+			swal("Good Job !","We will reach you shortly.","success").then(val=>{
 				window.location.reload()
 			})
 		}
